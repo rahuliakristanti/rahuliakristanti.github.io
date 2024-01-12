@@ -1,0 +1,241 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Warna overlay gelap, sesuaikan alpha channel sesuai keinginan Anda */
+  z-index: -1; /* Letakkan overlay di bawah konten utama */
+}
+
+/* Header and Navbar */
+.header-navbar {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-weight: bold; 
+  font-family: 'Sagoe UI', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 20vh;
+  margin-left: 50px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+  color: #FF7115;
+  border-bottom: 2px solid #FF7115;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 5px;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.product-info {
+  text-align: center;
+  flex: 1;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.product-info img.top-image {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.product-info img.top-image:hover {
+  transform: scale(1.1);
+}
+
+.product-info p {
+  color: white;
+  text-align: left;
+  font-size: 15px;
+  clear: both;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.booking-btn {
+  display: flex;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FF7115;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  float: left;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.booking-btn:hover {
+  background-color: #cf5c0f;
+}
+
+.user-form {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.user-form h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.user-form input[type="email"],
+.user-form input[type="password"],
+.user-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-form button {
+  background-color: #FF7115;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold; 
+  font-family: 'Arial', sans-serif;
+}
+
+.user-form button:hover {
+  background-color: #cf5c0f;
+}
+
+.user-form p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.user-form a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.user-form a:hover {
+  color: rgb(17, 17, 209);
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-image: linear-gradient(180deg, #f8f8f8 0%, rgb(211, 207, 207) 100%);
+  color: #333;
+  padding: 2px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media {
+  display: flex;
+  margin-left: 30px;
+}
+
+.social-media a {
+  color: #333;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 15px;
+  font-family: 'Tahoma', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #333;
+  border-bottom: 3px solid #FF7115;
+}
+
+.copyright {
+  margin-right: 30px;
+  font-size: 15px;
+  font-family: 'Tahoma', sans-serif;
+}
